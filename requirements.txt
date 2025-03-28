@@ -1,1 +1,4 @@
 Flask
+SQLAlchemy
+pydantic 
+python-dotenv
