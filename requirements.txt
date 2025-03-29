@@ -1,4 +1,6 @@
 Flask
-SQLAlchemy
-pydantic 
+Flask-SQLAlchemy
+PyMySQL
 python-dotenv
+SQLAlchemy
+waitress
