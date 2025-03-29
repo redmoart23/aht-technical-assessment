@@ -1,0 +1,44 @@
+:root {
+  --primary-color: #007bff; /* Blue */
+  --success-color: #28a745; /* Green */
+  --warning-color: #ffc107; /* Yellow */
+  --background-light-blue: #cfe2ff; /* Light background */
+  --background-light-green: #d4edda; /* Light background */
+  --background-light-yellow: #fff3cd; /* Light background */
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+  color: #007bff; /* Or any custom color */
+}
+.custom-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Base header style */
+.header-title {
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 2px 5px var(--shadow);
+}
+
+/* Variants */
+.header-title-primary {
+  color: var(--primary-color);
+  background-color: var(--background-light-blue);
+}
+
+.header-title-success {
+  color: var(--success-color);
+  background-color: var(--background-light-green);
+}
+
+.header-title-warning {
+  color: var(--warning-color);
+  background-color: var(--background-light-yellow);
+}

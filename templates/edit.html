@@ -1,9 +1,9 @@
 {% extends 'layout.html' %} {% block content %}
 
 <div class="custom-container">
-  <h1 class="header-title header-title-success">Add Item Page</h1>
+  <h1 class="header-title header-title-warning">Edit Item Page</h1>
 
-  <form class="row g-3" action="/add" method="POST">
+  <form class="row g-3" action="/edit/{{ item.id }}" method="POST">
     <div class="col-md-6">
       <label for="name" class="form-label">Name</label>
       <input
@@ -11,7 +11,7 @@
         name="name"
         placeholder="Name"
         class="form-control"
-        required
+        value="{{ item.name }}"
       />
     </div>
 
@@ -22,7 +22,7 @@
         name="price"
         placeholder="Price"
         class="form-control"
-        required
+        value="{{ item.price }}"
       />
     </div>
 
@@ -33,7 +33,7 @@
         name="mac_address"
         placeholder="Mac Address"
         class="form-control"
-        required
+        value="{{ item.mac_address }}"
       />
     </div>
     <div class="col-md-4">
@@ -43,7 +43,7 @@
         name="serial_number"
         placeholder="Serial Number"
         class="form-control"
-        required
+        value="{{ item.serial_number }}"
       />
     </div>
     <div class="col-md-4">
@@ -53,6 +53,7 @@
         name="manufacturer"
         placeholder="Manufacturer"
         class="form-control"
+        value="{{ item.manufacturer }}"
       />
     </div>
 
@@ -63,11 +64,12 @@
         name="description"
         placeholder="Description"
         class="form-control"
+        value="{{ item.description }}"
       />
     </div>
 
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Add</button>
+      <button class="btn btn-primary" type="submit">Edit</button>
       <a href="{{ url_for('inventory.index') }}" class="btn btn-danger"
         >Cancel</a
       >
